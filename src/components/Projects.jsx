@@ -2,22 +2,34 @@ const Projects = () => {
   // Placeholder data - you'll fill this in later
   const projects = [
     {
+      title: "Jarviz AI Assistant",
+      description: "Futuristic voice-activated AI assistant inspired by Iron Man's JARVIS. Features multimodal vision processing, real-time camera analysis, OCR translation, weather integration, and an immersive PyQt5 HUD overlay with LangGraph-orchestrated agent workflows.",
+      technologies: ["Python", "LangChain", "LangGraph", "OpenCV", "PyQt5", "Whisper", "ElevenLabs", "Qwen VL", "EasyOCR", "WebSockets", "Asyncio"],
+      link: "https://github.com/namanmiglani/Jarvis"
+    },
+    {
       title: "Exercise Form Tracker",
       description: "Full stack application with Flask backend and React frontend. Integrated OpenCV and MediaPipe achieving 95% accuracy in motion tracking and vector angle calculations for precise exercise movement detection.",
-      technologies: ["Flask", "React", "JavaScript", "CSS", "OpenCV", "MediaPipe", "Groq"],
-      link: "https://github.com/anasahmed2"
+      technologies: ["Flask", "React", "JavaScript", "CSS", "OpenCV", "MediaPipe", "Groq", "Axios"],
+      link: "https://github.com/hamin2006/nwHacks2025-gymAI"
+    },
+    {
+      title: "IoT Smart Streetlight & Weather Monitoring System",
+      description: "Built a smart streetlight and weather station using STM32 to enable adaptive lighting, real-time environmental monitoring, and cloud data visualization. The system reduces energy use, and streams live sensor and air-quality data to a web dashboard.",
+      technologies: ["Python", "C/C++", "Flask", "JavaScript", "HTML","CSS", "React", "PostgreSQL", "Raspberry Pi", "MongoDB",],
+      link: "https://github.com/UBCSmartCity/SmartStreetLight"
     },
     {
       title: "Finance Tracking Application",
       description: "Finance tracker with Java backend and Swing GUI for managing financial lists and tracking transactions. Achieved 95% test coverage with JUnit, validating 30+ methods and classes for a bug-free experience.",
       technologies: ["Java", "Swing", "JUnit", "JSON", "IntelliJ"],
-      link: "https://github.com/anasahmed2"
+      link: "https://github.com/anasahmed2/Java-Projects/tree/main/project_o5c5g"
     },
     {
       title: "Game Behaviour Analysis Model",
       description: "K-Nearest Neighbors classification model using Scikit-learn to predict player experience levels. Improved accuracy from 70% to 90% through hyperparameter tuning with GridSearchCV on 300+ entry dataset.",
       technologies: ["Python", "Pandas", "Scikit-learn", "NumPy", "Altair"],
-      link: "https://github.com/anasahmed2"
+      link: "https://github.com/anasahmed2/Machine-Learning"
     }
   ]
 

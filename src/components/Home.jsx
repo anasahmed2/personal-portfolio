@@ -32,10 +32,10 @@ const Home = () => {
               Computer Science Student & Software Developer
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
-              I'm a Computer Science student at UBC with a passion for building innovative solutions. 
-              From developing real-time embedded systems to creating machine learning applications, 
-              I love solving complex problems with clean, efficient code. Currently exploring opportunities 
-              in full-stack development and systems programming.
+              I’m a UBC Computer Science student building at the intersection of AI, embedded systems, and full-stack software. 
+              I develop real-time hardware–software systems, computer vision applications, and cloud-connected platforms that turn 
+              sensor data into intelligent action. From low-latency embedded communication to ML-powered vision systems and modern 
+              web dashboards, I enjoy engineering reliable systems that bridge the digital and physical worlds.
             </p>
             <div className="flex gap-4 pt-4">
               <a href="#contact" className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105">
