@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -6,6 +7,8 @@ const Contact = () => {
     email: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleChange = (e) => {
     setFormData({
@@ -14,11 +17,34 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Email functionality will be implemented later
-    console.log('Form submitted:', formData)
-    alert('Form submitted! Email functionality will be added later.')
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      // Replace these with your EmailJS credentials
+      const serviceId = 'service_w7x991i'
+      const templateId = 'template_yya0eul'
+      const publicKey = 'UdwQn1MmdirvUF1QB'
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'anas31ahmed03@gmail.com'
+      }
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey)
+      
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      console.error('Email send failed:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -83,10 +109,23 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-xl font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
+              disabled={isSubmitting}
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-xl font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
+
+            {submitStatus === 'success' && (
+              <div className="text-green-400 text-center p-4 glass rounded-xl">
+                ✓ Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="text-red-400 text-center p-4 glass rounded-xl">
+                ✗ Failed to send message. Please email me directly at anas31ahmed03@gmail.com
+              </div>
+            )}
           </form>
         </div>
 
