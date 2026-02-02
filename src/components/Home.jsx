@@ -29,11 +29,13 @@ const Home = () => {
               </h1>
             </div>
             <h2 className="text-2xl md:text-3xl text-gray-300 font-light">
-              [Your Title/Role]
+              Computer Science Student & Software Developer
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
-              [Your professional summary will go here. This is a brief introduction about yourself, 
-              your background, and what you're passionate about.]
+              I'm a Computer Science student at UBC with a passion for building innovative solutions. 
+              From developing real-time embedded systems to creating machine learning applications, 
+              I love solving complex problems with clean, efficient code. Currently exploring opportunities 
+              in full-stack development and systems programming.
             </p>
             <div className="flex gap-4 pt-4">
               <a href="#contact" className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105">

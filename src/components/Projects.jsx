@@ -2,22 +2,22 @@ const Projects = () => {
   // Placeholder data - you'll fill this in later
   const projects = [
     {
-      title: "Project 1",
-      description: "Description of your project goes here. What it does, what technologies you used, etc.",
-      technologies: ["Tech 1", "Tech 2", "Tech 3"],
-      link: "#"
+      title: "Exercise Form Tracker",
+      description: "Full stack application with Flask backend and React frontend. Integrated OpenCV and MediaPipe achieving 95% accuracy in motion tracking and vector angle calculations for precise exercise movement detection.",
+      technologies: ["Flask", "React", "JavaScript", "CSS", "OpenCV", "MediaPipe", "Groq"],
+      link: "https://github.com/anasahmed2"
     },
     {
-      title: "Project 2",
-      description: "Description of your project goes here. What it does, what technologies you used, etc.",
-      technologies: ["Tech 1", "Tech 2", "Tech 3"],
-      link: "#"
+      title: "Finance Tracking Application",
+      description: "Finance tracker with Java backend and Swing GUI for managing financial lists and tracking transactions. Achieved 95% test coverage with JUnit, validating 30+ methods and classes for a bug-free experience.",
+      technologies: ["Java", "Swing", "JUnit", "JSON", "IntelliJ"],
+      link: "https://github.com/anasahmed2"
     },
     {
-      title: "Project 3",
-      description: "Description of your project goes here. What it does, what technologies you used, etc.",
-      technologies: ["Tech 1", "Tech 2", "Tech 3"],
-      link: "#"
+      title: "Game Behaviour Analysis Model",
+      description: "K-Nearest Neighbors classification model using Scikit-learn to predict player experience levels. Improved accuracy from 70% to 90% through hyperparameter tuning with GridSearchCV on 300+ entry dataset.",
+      technologies: ["Python", "Pandas", "Scikit-learn", "NumPy", "Altair"],
+      link: "https://github.com/anasahmed2"
     }
   ]
 

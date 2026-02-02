@@ -2,16 +2,28 @@ const Experience = () => {
   // Placeholder data - you'll fill this in later
   const experiences = [
     {
-      title: "Incoming Software Developer Intern",
+      title: "Incoming Summer Technology Analyst",
       company: "Morgan Stanley",
-      period: "May. 2026 - Aug. 2026",
-      description: "Brief description of your role and responsibilities will go here."
+      period: "May 2026 - Aug 2026",
+      description: "Incoming summer technology analyst position at Morgan Stanley's Vancouver office."
     },
     {
       title: "Software Developer Intern",
-      company: "Atlas Power Technologies Inc.",
-      period: "May. 2025 - Dec. 2025",
-      description: "Brief description of your role and responsibilities will go here."
+      company: "Atlas Power Technologies",
+      period: "May 2025 - Dec 2025",
+      description: "Developed a full-stack system using C# and .NET Framework for embedded hardware communication via UART with <20ms latency. Designed data storage using MongoDB and PostgreSQL. Implemented TSN protocol in C across TI AM243x boards achieving 99% reliability. Integrated C++ libmodbus library for Modbus network I/O device communication."
+    },
+    {
+      title: "Software Engineer",
+      company: "UBC SAE AeroDesign",
+      period: "Sep 2025 - Present",
+      description: "Developed autonomous payload-capture system in Python using OpenCV and Pupil AprilTags with >85% tag detection accuracy. Implemented pre-trained YOLO model for real-time payload detection and localization, enhancing system reliability to 95%."
+    },
+    {
+      title: "Software Engineer",
+      company: "UBC Smart City",
+      period: "Jan 2025 - Sep 2025",
+      description: "Designed and implemented PostgreSQL database on Raspberry Pi managing 2000+ sensor readings. Created Python Flask backend with RESTful API. Developed Next.js frontend with React and CSS, integrated Nivo.js for data visualization and analytics."
     }
   ]
 

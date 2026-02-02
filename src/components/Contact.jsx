@@ -92,7 +92,7 @@ const Contact = () => {
 
         <p className="text-center text-gray-400 mt-8">
           Or email me directly at:{' '}
-          <a href="mailto:your.email@example.com" className="text-purple-400 hover:text-purple-300 transition-colors duration-300">
+          <a href="mailto:anas31ahmed03@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors duration-300">
             anas31ahmed03@gmail.com
           </a>
         </p>
