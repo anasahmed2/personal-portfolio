@@ -65,7 +65,7 @@ const Navbar = () => {
               <FaGithub size={24} />
             </a>
             <a 
-              href="YOUR_RESUME_URL" 
+              href="/Anas_Ahmed_Software_Resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-purple-400 transition-all duration-300 transform hover:scale-110"

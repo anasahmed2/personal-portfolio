@@ -14,7 +14,7 @@ const Projects = () => {
       link: "https://github.com/hamin2006/nwHacks2025-gymAI"
     },
     {
-      title: "IoT Smart Streetlight & Weather Monitoring System",
+      title: "Smart Streetlight & Weather Monitoring System",
       description: "Built a smart streetlight and weather station using STM32 to enable adaptive lighting, real-time environmental monitoring, and cloud data visualization. The system reduces energy use, and streams live sensor and air-quality data to a web dashboard.",
       technologies: ["Python", "C/C++", "Flask", "JavaScript", "HTML","CSS", "React", "PostgreSQL", "Raspberry Pi", "MongoDB",],
       link: "https://github.com/UBCSmartCity/SmartStreetLight"
