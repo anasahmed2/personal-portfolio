@@ -15,7 +15,7 @@ const Home = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
               <div className="relative w-72 h-72 glass rounded-full flex items-center justify-center overflow-hidden border-2 border-purple-500/50">
                 <img 
-                  src="/assests/profile_pic.jpg" 
+                  src="/assets/profile_pic.jpg" 
                   alt="Anas Ahmed" 
                   className="w-full h-full object-cover scale-125"
                 />
