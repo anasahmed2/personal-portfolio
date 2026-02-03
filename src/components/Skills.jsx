@@ -7,11 +7,11 @@ const Skills = () => {
     },
     {
       title: "Frameworks & Libraries",
-      skills: ["React", "Next.js", "Flask", ".NET Framework", "Pandas", "NumPy", "Scikit-learn", "OpenCV", "MediaPipe", "Express.js"]
+      skills: ["React", "Next.js", "Flask", ".NET Framework", "Express.js", "LangChain", "LangGraph", "Pandas", "NumPy", "Scikit-learn", "OpenCV", "MediaPipe", "YOLO", "PyQt5", "Whisper", "ElevenLabs", "Nivo.js", "Matplotlib", "Altair", "Tailwind CSS", "Swing", "JUnit", "MSTest", "Axios", "WebSockets", "Asyncio"]
     },
     {
       title: "Tools & Technologies",
-      skills: ["Git", "PostgreSQL", "MongoDB", "MySQL", "VS Code", "IntelliJ", "Jupyter Notebook", "Jira", "Postman", "Visual Studio"]
+      skills: ["Git", "GitHub", "PostgreSQL", "MongoDB", "MySQL", "VS Code", "IntelliJ", "Visual Studio", "Jupyter Notebook", "Jira", "Postman", "Raspberry Pi", "STM32", "TI AM243x", "UART", "Modbus", "LiDAR", "AprilTags", "GridSearchCV"]
     }
   ]
 
@@ -43,10 +43,10 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skillIndex} 
-                    className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors duration-300"
+                    className="flex items-center gap-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 group cursor-default"
                   >
-                    <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-                    <span>{skill}</span>
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full group-hover:scale-125 transition-transform"></div>
+                    <span className="text-sm">{skill}</span>
                   </div>
                 ))}
               </div>

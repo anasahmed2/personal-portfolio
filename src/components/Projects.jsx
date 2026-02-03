@@ -9,14 +9,14 @@ const Projects = () => {
     },
     {
       title: "Exercise Form Tracker",
-      description: "Full stack application with Flask backend and React frontend. Integrated OpenCV and MediaPipe achieving 95% accuracy in motion tracking and vector angle calculations for precise exercise movement detection.",
+      description: "Full-stack application with Flask backend and React frontend. Integrated OpenCV and MediaPipe achieving 95% accuracy in motion tracking and vector angle calculations for precise exercise movement detection.",
       technologies: ["Flask", "React", "JavaScript", "CSS", "OpenCV", "MediaPipe", "Groq", "Axios"],
       link: "https://github.com/hamin2006/nwHacks2025-gymAI"
     },
     {
       title: "Smart Streetlight & Weather Monitoring System",
-      description: "Built a smart streetlight and weather station using STM32 to enable adaptive lighting, real-time environmental monitoring, and cloud data visualization. The system reduces energy use, and streams live sensor and air-quality data to a web dashboard.",
-      technologies: ["Python", "C/C++", "Flask", "JavaScript", "HTML","CSS", "React", "PostgreSQL", "Raspberry Pi", "MongoDB",],
+      description: "Built a smart streetlight and weather station using STM32 to enable adaptive lighting, real-time environmental monitoring, and cloud data visualization. Streams live sensor and air-quality data to a web dashboard for energy optimization.",
+      technologies: ["Python", "C/C++", "Flask", "JavaScript", "HTML", "CSS", "React", "PostgreSQL", "Raspberry Pi", "MongoDB"],
       link: "https://github.com/UBCSmartCity/SmartStreetLight"
     },
     {
@@ -26,7 +26,7 @@ const Projects = () => {
       link: "https://github.com/anasahmed2/Java-Projects/tree/main/project_o5c5g"
     },
     {
-      title: "Game Behaviour Analysis Model",
+      title: "Game Behavior Analysis Model",
       description: "K-Nearest Neighbors classification model using Scikit-learn to predict player experience levels. Improved accuracy from 70% to 90% through hyperparameter tuning with GridSearchCV on 300+ entry dataset.",
       technologies: ["Python", "Pandas", "Scikit-learn", "NumPy", "Altair"],
       link: "https://github.com/anasahmed2/Machine-Learning"
@@ -47,23 +47,23 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="glass p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 group hover:scale-105 relative overflow-hidden"
+              className="glass p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 group hover:scale-105 relative overflow-hidden flex flex-col"
             >
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col h-full">
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="bg-purple-500/20 text-purple-300 text-sm px-3 py-1 rounded-full border border-purple-500/30"
+                      className="bg-purple-500/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30 whitespace-nowrap"
                     >
                       {tech}
                     </span>
@@ -71,6 +71,8 @@ const Projects = () => {
                 </div>
                 <a 
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors duration-300"
                 >
                   View Project 

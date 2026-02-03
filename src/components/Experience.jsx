@@ -43,23 +43,25 @@ const Experience = () => {
           
           <div className="space-y-12">
             {experiences.map((exp, index) => (
-              <div key={index} className={`flex flex-col md:flex-row gap-8 items-center ${
+              <div key={index} className={`flex flex-col md:flex-row gap-8 items-stretch ${
                 index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
               }`}>
                 {/* Content */}
-                <div className="flex-1 glass p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group hover:scale-105">
+                <div className="flex-1 glass p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group hover:scale-105 flex flex-col justify-between">
                   <div className="flex flex-col space-y-3">
                     <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300">
                       {exp.title}
                     </h3>
-                    <p className="text-xl text-purple-400 font-medium">{exp.company}</p>
-                    <span className="text-gray-400 text-sm">{exp.period}</span>
+                    <p className="text-lg text-purple-400 font-semibold">{exp.company}</p>
+                    <span className="text-sm text-gray-400">{exp.period}</span>
                     <p className="text-gray-300 leading-relaxed pt-2">{exp.description}</p>
                   </div>
                 </div>
                 
                 {/* Timeline dot */}
-                <div className="hidden md:flex w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full ring-4 ring-slate-900 z-10"></div>
+                <div className="hidden md:flex items-center justify-center">
+                  <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full ring-4 ring-slate-900 z-10"></div>
+                </div>
                 
                 {/* Spacer */}
                 <div className="flex-1 hidden md:block"></div>
