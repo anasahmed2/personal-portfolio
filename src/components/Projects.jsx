@@ -30,6 +30,12 @@ const Projects = () => {
       description: "K-Nearest Neighbors classification model using Scikit-learn to predict player experience levels. Improved accuracy from 70% to 90% through hyperparameter tuning with GridSearchCV on 300+ entry dataset.",
       technologies: ["Python", "Pandas", "Scikit-learn", "NumPy", "Altair"],
       link: "https://github.com/anasahmed2/Machine-Learning"
+    },
+    {
+      title: "Chess",
+      description: "Java-based chess game with a graphical user interface using HTML, CSS and Javascript. Features include two-player mode, move validation, check/checkmate detection, and a user-friendly design for an engaging gameplay experience.",
+      technologies: ["Java", "IntelliJ", "VS Code", "HTML", "CSS", "JavaScript", "JSON"],
+      link: "https://github.com/anasahmed2/Chess"
     }
   ]
 
