@@ -8,7 +8,7 @@ const Projects = () => {
       link: "https://github.com/namanmiglani/Jarvis"
     },
     {
-      title: "Exercise Form Tracker",
+      title: "GymAI: AI-Powered Exercise Tracker",
       description: "Full-stack application with Flask backend and React frontend. Integrated OpenCV and MediaPipe achieving 95% accuracy in motion tracking and vector angle calculations for precise exercise movement detection.",
       technologies: ["Flask", "React", "JavaScript", "CSS", "OpenCV", "MediaPipe", "Groq", "Axios"],
       link: "https://github.com/hamin2006/nwHacks2025-gymAI"
@@ -36,6 +36,12 @@ const Projects = () => {
       description: "Java-based chess game with a graphical user interface using HTML, CSS and Javascript. Features include two-player mode, move validation, check/checkmate detection, and a user-friendly design for an engaging gameplay experience.",
       technologies: ["Java", "IntelliJ", "VS Code", "HTML", "CSS", "JavaScript", "JSON"],
       link: "https://github.com/anasahmed2/Chess"
+    },
+    {
+      title: "NFL Championship Classifier",
+      description: "Machine learning system using XGBoost to predict NFL Super Bowl champions based on historical team performance data. Implements time-based cross-validation to prevent data leakage, hyperparameter tuning with GridSearchCV, and comprehensive evaluation metrics including Log Loss, ROC-AUC, and Brier Score for accurate probability calibration.",
+  technologies: ["Python", "XGBoost", "Scikit-learn", "Pandas", "Matplotlib", "Jupyter Notebook", "GridSearchCV", "Seaborn", "NumPy"],
+      link: "https://github.com/anasahmed2/nfl_championship_classifier"
     }
   ]
 
