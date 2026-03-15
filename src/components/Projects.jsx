@@ -40,8 +40,14 @@ const Projects = () => {
     {
       title: "NFL Championship Classifier",
       description: "Machine learning system using XGBoost to predict NFL Super Bowl champions based on historical team performance data. Implements time-based cross-validation to prevent data leakage, hyperparameter tuning with GridSearchCV, and comprehensive evaluation metrics including Log Loss, ROC-AUC, and Brier Score for accurate probability calibration.",
-  technologies: ["Python", "XGBoost", "Scikit-learn", "Pandas", "Matplotlib", "Jupyter Notebook", "GridSearchCV", "Seaborn", "NumPy"],
+      technologies: ["Python", "XGBoost", "Scikit-learn", "Pandas", "Matplotlib", "Jupyter Notebook", "GridSearchCV", "Seaborn", "NumPy"],
       link: "https://github.com/anasahmed2/nfl_championship_classifier"
+    },
+    {
+      title: "AI Strategy Game",
+      description: "C++/SFML top-down RTS prototype with a custom ECS architecture. Features player and enemy factions, a worker economy with gold gathering, unit production, combat, A* grid pathfinding, behavior-tree-driven enemy AI with a shared blackboard, fog of war, drag-box selection, and a HUD/debug overlay.",
+      technologies: ["C++17", "SFML", "CMake", "ECS", "Behavior Trees", "FSM", "A* Pathfinding", "WSL"],
+      link: "https://github.com/anasahmed2/AI-Strategy-Game"
     }
   ]
 
