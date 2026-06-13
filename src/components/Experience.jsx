@@ -27,46 +27,35 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="min-h-screen py-20 relative">
+    <section id="experience" className="min-h-screen py-24 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold section-title mb-4">
             Professional <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-gray-400 text-lg">My journey in the tech industry</p>
+          <p className="section-subtitle text-lg">My journey in the tech industry</p>
         </div>
         
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 opacity-30 hidden md:block"></div>
-          
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <div key={index} className={`flex flex-col md:flex-row gap-8 items-stretch ${
-                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              }`}>
-                {/* Content */}
-                <div className="flex-1 glass p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group hover:scale-105 flex flex-col justify-between">
-                  <div className="flex flex-col space-y-3">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300">
-                      {exp.title}
-                    </h3>
-                    <p className="text-lg text-purple-400 font-semibold">{exp.company}</p>
-                    <span className="text-sm text-gray-400">{exp.period}</span>
-                    <p className="text-gray-300 leading-relaxed pt-2">{exp.description}</p>
-                  </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {experiences.map((exp, index) => (
+            <article
+              key={index}
+              className="glass rounded-[1.75rem] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-t-4 border-sky-400"
+            >
+              <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-800 mb-2">
+                    {exp.title}
+                  </h3>
+                  <p className="text-lg text-sky-700 font-semibold">{exp.company}</p>
                 </div>
-                
-                {/* Timeline dot */}
-                <div className="hidden md:flex items-center justify-center">
-                  <div className="w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full ring-4 ring-slate-900 z-10"></div>
-                </div>
-                
-                {/* Spacer */}
-                <div className="flex-1 hidden md:block"></div>
+                <span className="rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700">
+                  {exp.period}
+                </span>
               </div>
-            ))}
-          </div>
+              <p className="text-slate-600 leading-relaxed">{exp.description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

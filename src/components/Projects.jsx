@@ -52,36 +52,37 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="min-h-screen py-20 relative">
+    <section id="projects" className="min-h-screen py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl font-bold section-title mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-gray-400 text-lg">Some of my recent work</p>
+          <p className="section-subtitle text-lg">Some of my recent work</p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="glass p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 group hover:scale-105 relative overflow-hidden flex flex-col"
+              className={`glass p-6 rounded-[1.75rem] transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl relative overflow-hidden flex flex-col ${
+                index === 0 ? 'xl:col-span-2' : ''
+              }`}
             >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-transparent to-amber-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[1.75rem]"></div>
               
               <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300">
+                <h3 className="text-2xl font-bold text-slate-800 mb-3 transition-all duration-300 group-hover:text-sky-700">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed flex-grow">
+                <p className="text-slate-600 mb-4 leading-relaxed flex-grow">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="bg-purple-500/20 text-purple-300 text-xs px-3 py-1 rounded-full border border-purple-500/30 whitespace-nowrap"
+                      className="bg-sky-100 text-sky-700 text-xs px-3 py-1 rounded-full border border-sky-200 whitespace-nowrap"
                     >
                       {tech}
                     </span>
@@ -91,7 +92,7 @@ const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors duration-300"
+                  className="inline-flex items-center gap-2 text-sky-700 hover:text-sky-500 font-medium transition-colors duration-300"
                 >
                   View Project 
                   <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
