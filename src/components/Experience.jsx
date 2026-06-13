@@ -2,10 +2,9 @@ const Experience = () => {
   // Placeholder data - you'll fill this in later
   const experiences = [
     {
-      title: "Incoming Software Developer Intern",
+      title: "Software Engineering Intern",
       company: "Morgan Stanley",
-      period: "May 2026 - Aug 2026",
-      description: "Incoming Software Developer Intern at Morgan Stanley."
+      period: "May 2026 - Aug 2026"
     },
     {
       title: "Software Developer Intern",
