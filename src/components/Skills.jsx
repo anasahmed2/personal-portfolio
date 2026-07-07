@@ -32,10 +32,10 @@ const Skills = () => {
               className="glass p-8 rounded-[1.75rem] transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-sky-500 via-fuchsia-500 to-orange-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-md shadow-sky-200">
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 via-purple-500 to-indigo-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-md shadow-indigo-900">
                   {category.title.charAt(0)}
                 </div>
-                <h3 className="text-2xl font-semibold text-slate-800">
+                <h3 className="text-2xl font-semibold text-slate-100">
                   {category.title}
                 </h3>
               </div>
@@ -43,9 +43,9 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skillIndex} 
-                    className="flex items-center gap-2 text-slate-600 hover:text-sky-700 transition-colors duration-300 group cursor-default"
+                    className="flex items-center gap-2 text-slate-300 hover:text-indigo-300 transition-colors duration-300 group cursor-default"
                   >
-                    <div className="w-2 h-2 bg-gradient-to-r from-sky-500 via-fuchsia-500 to-orange-400 rounded-full group-hover:scale-125 transition-transform"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-300 rounded-full group-hover:scale-125 transition-transform"></div>
                     <span className="text-sm">{skill}</span>
                   </div>
                 ))}

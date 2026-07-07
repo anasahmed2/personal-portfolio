@@ -69,20 +69,20 @@ const Projects = () => {
                 index === 0 ? 'xl:col-span-2' : ''
               }`}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-transparent to-amber-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[1.75rem]"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-transparent to-slate-800 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-[1.75rem]"></div>
               
               <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-slate-800 mb-3 transition-all duration-300 group-hover:text-sky-700">
+                <h3 className="text-2xl font-bold text-slate-100 mb-3 transition-all duration-300 group-hover:text-indigo-300">
                   {project.title}
                 </h3>
-                <p className="text-slate-600 mb-4 leading-relaxed flex-grow">
+                <p className="text-slate-300 mb-4 leading-relaxed flex-grow">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span 
                       key={techIndex}
-                      className="bg-sky-100 text-sky-700 text-xs px-3 py-1 rounded-full border border-sky-200 whitespace-nowrap"
+                      className="bg-slate-700/50 text-indigo-300 text-xs px-3 py-1 rounded-full border border-slate-600 whitespace-nowrap"
                     >
                       {tech}
                     </span>
@@ -92,7 +92,7 @@ const Projects = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sky-700 hover:text-sky-500 font-medium transition-colors duration-300"
+                  className="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-medium transition-colors duration-300"
                 >
                   View Project 
                   <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

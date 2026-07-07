@@ -40,20 +40,20 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <article
               key={index}
-              className="glass rounded-[1.75rem] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-t-4 border-sky-400"
+              className="glass rounded-[1.75rem] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-t-4 border-indigo-400"
             >
               <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-800 mb-2">
+                  <h3 className="text-2xl font-bold text-slate-100 mb-2">
                     {exp.title}
                   </h3>
-                  <p className="text-lg text-sky-700 font-semibold">{exp.company}</p>
+                  <p className="text-lg text-indigo-300 font-semibold">{exp.company}</p>
                 </div>
-                <span className="rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700">
+                <span className="rounded-full bg-slate-700/50 px-4 py-2 text-sm font-semibold text-indigo-300">
                   {exp.period}
                 </span>
               </div>
-              <p className="text-slate-600 leading-relaxed">{exp.description}</p>
+              <p className="text-slate-300 leading-relaxed">{exp.description}</p>
             </article>
           ))}
         </div>

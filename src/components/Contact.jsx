@@ -59,25 +59,25 @@ const Contact = () => {
         
         <div className="grid lg:grid-cols-5 gap-8 items-start">
           <div className="glass rounded-[2rem] p-8 lg:p-10 lg:col-span-2">
-            <div className="inline-flex items-center rounded-full bg-sky-100 px-4 py-2 text-sm font-semibold text-sky-700 mb-6">
+            <div className="inline-flex items-center rounded-full bg-slate-700/50 px-4 py-2 text-sm font-semibold text-indigo-300 mb-6">
               Available for collaborative work
             </div>
-            <h3 className="text-3xl font-bold text-slate-800 mb-4">Have an idea worth building?</h3>
-            <p className="text-slate-600 leading-relaxed mb-8">
+            <h3 className="text-3xl font-bold text-slate-100 mb-4">Have an idea worth building?</h3>
+            <p className="text-slate-300 leading-relaxed mb-8">
               If you want to talk about software, embedded systems, AI, or a product that needs a sharper interface,
               send a message and I’ll get back to you.
             </p>
 
             <div className="space-y-4">
-              <div className="rounded-2xl bg-sky-50 border border-sky-100 p-4">
-                <div className="text-sm font-semibold text-sky-700 uppercase tracking-[0.2em]">Email</div>
-                <a href="mailto:anas31ahmed03@gmail.com" className="mt-1 block text-slate-700 hover:text-sky-700 transition-colors duration-300">
+              <div className="rounded-2xl bg-slate-700/50 border border-slate-700 p-4">
+                <div className="text-sm font-semibold text-indigo-300 uppercase tracking-[0.2em]">Email</div>
+                <a href="mailto:anas31ahmed03@gmail.com" className="mt-1 block text-slate-200 hover:text-indigo-300 transition-colors duration-300">
                   anas31ahmed03@gmail.com
                 </a>
               </div>
-              <div className="rounded-2xl bg-amber-50 border border-amber-100 p-4">
-                <div className="text-sm font-semibold text-amber-700 uppercase tracking-[0.2em]">Focus</div>
-                <div className="mt-1 text-slate-700">AI systems, full-stack apps, computer vision, and embedded tooling</div>
+              <div className="rounded-2xl bg-slate-700/50 border border-slate-700 p-4">
+                <div className="text-sm font-semibold text-indigo-300 uppercase tracking-[0.2em]">Focus</div>
+                <div className="mt-1 text-slate-200">AI systems, full-stack apps, computer vision, and embedded tooling</div>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ const Contact = () => {
           <div className="glass p-8 sm:p-10 rounded-[2rem] lg:col-span-3">
             <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-slate-700 font-medium mb-2">
+              <label htmlFor="name" className="block text-slate-200 font-medium mb-2">
                 Name
               </label>
               <input
@@ -95,13 +95,13 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 bg-white/90 border border-sky-100 rounded-2xl text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-sky-400 focus:border-transparent transition-all duration-300 shadow-sm"
+                className="w-full px-6 py-4 bg-slate-700/50 border border-slate-600 rounded-2xl text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 shadow-sm"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-slate-700 font-medium mb-2">
+              <label htmlFor="email" className="block text-slate-200 font-medium mb-2">
                 Email
               </label>
               <input
@@ -111,13 +111,13 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-6 py-4 bg-white/90 border border-sky-100 rounded-2xl text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-sky-400 focus:border-transparent transition-all duration-300 shadow-sm"
+                className="w-full px-6 py-4 bg-slate-700/50 border border-slate-600 rounded-2xl text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 shadow-sm"
                 placeholder="your.email@example.com"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-slate-700 font-medium mb-2">
+              <label htmlFor="message" className="block text-slate-200 font-medium mb-2">
                 Message
               </label>
               <textarea
@@ -126,8 +126,8 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows="5"
-                className="w-full px-6 py-4 bg-white/90 border border-sky-100 rounded-2xl text-slate-800 placeholder-slate-400 focus:ring-2 focus:ring-sky-400 focus:border-transparent transition-all duration-300 resize-none shadow-sm"
+                rows="6"
+                className="w-full px-6 py-4 bg-slate-700/50 border border-slate-600 rounded-2xl text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 shadow-sm resize-none"
                 placeholder="Tell me about your project..."
               ></textarea>
             </div>
@@ -135,7 +135,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-sky-500 via-fuchsia-500 to-orange-400 text-white py-4 rounded-2xl font-semibold hover:shadow-lg hover:shadow-sky-200 transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              className="w-full px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-400 text-white rounded-2xl font-semibold shadow-lg shadow-indigo-900 transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
