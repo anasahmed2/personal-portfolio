@@ -10,10 +10,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 order-2 lg:order-1 space-y-8">
-            <div className="inline-flex items-center gap-3 rounded-full bg-slate-800/80 px-5 py-3 shadow-sm border border-slate-700">
-              <span className="h-3 w-3 rounded-full bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-300"></span>
-              <span className="text-sm font-semibold text-indigo-300 uppercase tracking-[0.2em]">Bright ideas, clean systems</span>
-            </div>
+           
 
             <div className="space-y-5">
               <h2 className="text-xl text-indigo-300 font-semibold">Welcome to my portfolio</h2>
@@ -79,10 +76,7 @@ const Home = () => {
                       />
                     </div>
                   </div>
-                  <div className="absolute left-6 bottom-6 rounded-2xl bg-white/95 px-4 py-3 shadow-lg border border-sky-100 max-w-[220px]">
-                    <div className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-sky-600">Currently building</div>
-                    <div className="mt-1 text-sm font-medium text-slate-800">bright, reliable software</div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
