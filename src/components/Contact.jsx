@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { HiOutlineMail, HiOutlineSparkles } from 'react-icons/hi'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import Reveal from './Reveal'
+import SectionHeading from './SectionHeading'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +40,7 @@ const Contact = () => {
       }
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey)
-      
+
       setSubmitStatus('success')
       setFormData({ name: '', email: '', message: '' })
     } catch (error) {
@@ -47,112 +51,156 @@ const Contact = () => {
     }
   }
 
-  return (
-    <section id="contact" className="min-h-screen py-24 relative flex items-center">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold section-title mb-4">
-            Get <span className="gradient-text">In Touch</span>
-          </h2>
-          <p className="section-subtitle text-lg">Let’s build something amazing together</p>
-        </div>
-        
-        <div className="grid lg:grid-cols-5 gap-8 items-start">
-          <div className="glass rounded-[2rem] p-8 lg:p-10 lg:col-span-2">
-            <div className="inline-flex items-center rounded-full bg-slate-700/50 px-4 py-2 text-sm font-semibold text-indigo-300 mb-6">
-              Available for collaborative work
-            </div>
-            <h3 className="text-3xl font-bold text-slate-100 mb-4">Have an idea worth building?</h3>
-            <p className="text-slate-300 leading-relaxed mb-8">
-              If you want to talk about software, embedded systems, AI, or a product that needs a sharper interface,
-              send a message and I’ll get back to you.
-            </p>
+  const inputClasses =
+    'w-full rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-slate-100 placeholder-slate-500 outline-none transition-all duration-300 focus:border-indigo-400/50 focus:bg-white/[0.05] focus:ring-2 focus:ring-indigo-500/30'
 
-            <div className="space-y-4">
-              <div className="rounded-2xl bg-slate-700/50 border border-slate-700 p-4">
-                <div className="text-sm font-semibold text-indigo-300 uppercase tracking-[0.2em]">Email</div>
-                <a href="mailto:anas31ahmed03@gmail.com" className="mt-1 block text-slate-200 hover:text-indigo-300 transition-colors duration-300">
-                  anas31ahmed03@gmail.com
+  return (
+    <section id="contact" className="relative py-24 sm:py-32">
+      <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Contact"
+          title="Get"
+          highlight="In Touch"
+          subtitle="Let’s build something amazing together"
+        />
+
+        <div className="grid items-start gap-6 lg:grid-cols-5">
+          {/* Info card */}
+          <Reveal className="lg:col-span-2">
+            <div className="card h-full p-8 lg:p-10">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-medium text-indigo-300">
+                <HiOutlineSparkles size={16} />
+                Available for collaborative work
+              </div>
+              <h3 className="font-display text-2xl font-bold text-slate-100">
+                Have an idea worth building?
+              </h3>
+              <p className="mt-4 leading-relaxed text-slate-400">
+                If you want to talk about software, embedded systems, AI, or a product that needs a sharper interface,
+                send a message and I&rsquo;ll get back to you.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <div className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
+                    Email
+                  </div>
+                  <a
+                    href="mailto:anas31ahmed03@gmail.com"
+                    className="mt-1 flex items-center gap-2 text-slate-200 transition-colors duration-300 hover:text-indigo-300"
+                  >
+                    <HiOutlineMail size={18} />
+                    anas31ahmed03@gmail.com
+                  </a>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+                  <div className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
+                    Focus
+                  </div>
+                  <div className="mt-1 text-slate-200">
+                    AI systems, full-stack apps, computer vision, and embedded tooling
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 flex gap-3">
+                <a
+                  href="https://www.linkedin.com/in/anasahmed05/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-400/40 hover:text-white"
+                >
+                  <FaLinkedin size={18} />
+                </a>
+                <a
+                  href="https://github.com/anasahmed2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-400/40 hover:text-white"
+                >
+                  <FaGithub size={18} />
                 </a>
               </div>
-              <div className="rounded-2xl bg-slate-700/50 border border-slate-700 p-4">
-                <div className="text-sm font-semibold text-indigo-300 uppercase tracking-[0.2em]">Focus</div>
-                <div className="mt-1 text-slate-200">AI systems, full-stack apps, computer vision, and embedded tooling</div>
-              </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="glass p-8 sm:p-10 rounded-[2rem] lg:col-span-3">
-            <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-slate-200 font-medium mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-6 py-4 bg-slate-700/50 border border-slate-600 rounded-2xl text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 shadow-sm"
-                placeholder="Your name"
-              />
+          {/* Form */}
+          <Reveal delay={120} className="lg:col-span-3">
+            <div className="card p-8 sm:p-10">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="mb-2 block font-medium text-slate-200">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className={inputClasses}
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="mb-2 block font-medium text-slate-200">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className={inputClasses}
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="mb-2 block font-medium text-slate-200">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows="6"
+                    className={`${inputClasses} resize-none`}
+                    placeholder="Tell me about your project..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 px-8 py-4 font-semibold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
+                >
+                  <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
+                  <span className="relative">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                </button>
+
+                {submitStatus === 'success' && (
+                  <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-center text-emerald-300">
+                    ✓ Message sent successfully! I'll get back to you soon.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="rounded-2xl border border-rose-500/30 bg-rose-500/10 p-4 text-center text-rose-300">
+                    ✗ Failed to send message. Please email me directly at anas31ahmed03@gmail.com
+                  </div>
+                )}
+              </form>
             </div>
-
-            <div>
-              <label htmlFor="email" className="block text-slate-200 font-medium mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-6 py-4 bg-slate-700/50 border border-slate-600 rounded-2xl text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 shadow-sm"
-                placeholder="your.email@example.com"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-slate-200 font-medium mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows="6"
-                className="w-full px-6 py-4 bg-slate-700/50 border border-slate-600 rounded-2xl text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition-all duration-300 shadow-sm resize-none"
-                placeholder="Tell me about your project..."
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-400 text-white rounded-2xl font-semibold shadow-lg shadow-indigo-900 transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </button>
-
-            {submitStatus === 'success' && (
-              <div className="text-emerald-700 text-center p-4 glass rounded-2xl border border-emerald-100">
-                ✓ Message sent successfully! I'll get back to you soon.
-              </div>
-            )}
-
-            {submitStatus === 'error' && (
-              <div className="text-rose-700 text-center p-4 glass rounded-2xl border border-rose-100">
-                ✗ Failed to send message. Please email me directly at anas31ahmed03@gmail.com
-              </div>
-            )}
-          </form>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -1,87 +1,150 @@
+import { FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa'
+import { HiArrowDown } from 'react-icons/hi'
+import Reveal from './Reveal'
+
+const focusAreas = ['AI Systems', 'Embedded Software', 'Full-Stack Web', 'Computer Vision']
+
+const stats = [
+  ['AI', 'Vision-driven projects'],
+  ['Systems', 'Hardware to cloud'],
+  ['Web', 'Modern interfaces'],
+]
+
+const socials = [
+  { href: 'https://www.linkedin.com/in/anasahmed05/', label: 'LinkedIn', Icon: FaLinkedin },
+  { href: 'https://github.com/anasahmed2', label: 'GitHub', Icon: FaGithub },
+  { href: '/assets/Anas_Ahmed_Software_Resume.pdf', label: 'Resume', Icon: FaFileDownload },
+]
+
 const Home = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-28 pb-20">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-16 left-10 h-72 w-72 rounded-full bg-indigo-900/20 blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/3 right-10 h-80 w-80 rounded-full bg-purple-900/15 blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-indigo-900/10 blur-3xl animate-pulse" style={{animationDelay: '1.5s'}}></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 order-2 lg:order-1 space-y-8">
-           
-
-            <div className="space-y-5">
-              <h2 className="text-xl text-indigo-300 font-semibold">Welcome to my portfolio</h2>
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-100 leading-[1.05]">
-                Hi, I'm <br />
-                <span className="gradient-text">Anas Ahmed</span>
-              </h1>
-            </div>
-
-            <h2 className="text-2xl md:text-3xl text-slate-200 font-medium max-w-2xl">
-              Computer Science Student & Software Developer
-            </h2>
-            <p className="text-lg text-slate-300 leading-relaxed max-w-2xl">
-              I’m a UBC Computer Science student building at the intersection of AI, embedded systems, and full-stack software.
-              I develop real-time hardware–software systems, computer vision applications, and cloud-connected platforms that turn
-              sensor data into intelligent action. From low-latency embedded communication to ML-powered vision systems and modern
-              web dashboards, I enjoy engineering reliable systems that bridge the digital and physical worlds.
-            </p>
-
-            <div className="flex flex-wrap gap-3">
-              {['AI Systems', 'Embedded Software', 'Full-Stack Web', 'Computer Vision'].map((item) => (
-                <span key={item} className="rounded-full bg-slate-800/80 px-4 py-2 text-sm font-medium text-slate-200 border border-slate-700 shadow-sm">
-                  {item}
+    <section
+      id="home"
+      className="relative flex min-h-screen items-center overflow-hidden pb-20 pt-28"
+    >
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-12">
+          {/* Left column */}
+          <div className="order-2 space-y-8 lg:order-1 lg:col-span-7">
+            <Reveal>
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-sm font-medium text-slate-300">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                 </span>
-              ))}
+                Welcome to my portfolio
+              </span>
+            </Reveal>
+
+            <div className="space-y-4">
+              <Reveal delay={80}>
+                <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-slate-50 sm:text-6xl lg:text-7xl">
+                  Hi, I&apos;m
+                  <br />
+                  <span className="text-shimmer">Anas Ahmed</span>
+                </h1>
+              </Reveal>
+              <Reveal delay={160}>
+                <h2 className="text-2xl font-medium text-slate-300 md:text-3xl">
+                  Computer Science Student &amp; Software Developer
+                </h2>
+              </Reveal>
             </div>
 
-            <div className="flex flex-wrap gap-4 pt-2">
-              <a href="#contact" className="px-8 py-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-400 text-white rounded-full font-semibold shadow-lg shadow-indigo-900 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-xl hover:shadow-indigo-900">
-                Get in Touch
-              </a>
-              <a href="#projects" className="px-8 py-3 rounded-full font-semibold text-slate-100 bg-slate-800/80 border border-slate-700 shadow-sm transition-all duration-300 hover:bg-slate-700 hover:border-slate-600">
-                View Work
-              </a>
-            </div>
+            <Reveal delay={220}>
+              <p className="max-w-2xl text-lg leading-relaxed text-slate-400">
+                I&rsquo;m a UBC Computer Science student building at the intersection of AI, embedded systems, and full-stack software.
+                I develop real-time hardware&ndash;software systems, computer vision applications, and cloud-connected platforms that turn
+                sensor data into intelligent action. From low-latency embedded communication to ML-powered vision systems and modern
+                web dashboards, I enjoy engineering reliable systems that bridge the digital and physical worlds.
+              </p>
+            </Reveal>
 
-            <div className="grid sm:grid-cols-3 gap-4 pt-4">
-              {[
-                ['AI', 'Vision-driven projects'],
-                ['Systems', 'Hardware to cloud'],
-                ['Web', 'Modern interfaces']
-              ].map(([label, description]) => (
-                <div key={label} className="glass rounded-2xl p-4">
-                  <div className="text-sm font-semibold text-indigo-300 uppercase tracking-[0.2em]">{label}</div>
-                  <div className="mt-2 text-sm text-slate-600">{description}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+            <Reveal delay={280}>
+              <div className="flex flex-wrap gap-2.5">
+                {focusAreas.map((item) => (
+                  <span key={item} className="chip">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </Reveal>
 
-          <div className="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative max-w-md w-full group">
-              <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-br from-sky-400 via-fuchsia-400 to-orange-300 blur-xl opacity-70 group-hover:opacity-100 transition duration-700"></div>
-              <div className="relative overflow-hidden rounded-[2rem] bg-white/85 border border-white/70 shadow-[0_24px_80px_rgba(15,23,42,0.14)]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.7),_transparent_45%)]"></div>
-                <div className="relative p-5">
-                  <div className="glass rounded-[1.5rem] p-4">
-                    <div className="overflow-hidden rounded-[1.25rem] border border-sky-100 bg-sky-50">
-                      <img 
-                        src="/assets/profile_pic.jpg" 
-                        alt="Anas Ahmed" 
-                        className="h-[420px] w-full object-cover object-top"
-                      />
-                    </div>
-                  </div>
-                  
+            <Reveal delay={340}>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  href="#contact"
+                  className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 px-8 py-3.5 font-semibold text-white shadow-glow transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
+                  <span className="relative">Get in Touch</span>
+                </a>
+                <a
+                  href="#projects"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-8 py-3.5 font-semibold text-slate-100 transition-all duration-300 hover:border-indigo-400/40 hover:bg-white/[0.06]"
+                >
+                  View Work
+                </a>
+                <div className="flex items-center gap-2">
+                  {socials.map(({ href, label, Icon }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-400/40 hover:text-white"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  ))}
                 </div>
               </div>
-            </div>
+            </Reveal>
+
+            <Reveal delay={400}>
+              <div className="grid gap-4 pt-4 sm:grid-cols-3">
+                {stats.map(([label, description]) => (
+                  <div key={label} className="card p-4">
+                    <div className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
+                      {label}
+                    </div>
+                    <div className="mt-2 text-sm text-slate-400">{description}</div>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Right column — profile */}
+          <div className="order-1 flex justify-center lg:order-2 lg:col-span-5 lg:justify-end">
+            <Reveal delay={200} className="w-full max-w-sm">
+              <div className="group relative animate-float">
+                <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-indigo-500/40 via-purple-500/30 to-cyan-400/40 opacity-60 blur-2xl transition-opacity duration-700 group-hover:opacity-100" />
+                <div className="border-glow relative overflow-hidden rounded-[2rem] bg-ink-800/60 p-3 backdrop-blur-xl">
+                  <div className="overflow-hidden rounded-[1.5rem]">
+                    <img
+                      src="/assets/profile_pic.jpg"
+                      alt="Anas Ahmed"
+                      className="h-[440px] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="pointer-events-none absolute inset-3 rounded-[1.5rem] ring-1 ring-inset ring-white/10" />
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
+
+        <Reveal delay={500}>
+          <a
+            href="#skills"
+            className="mx-auto mt-16 flex w-fit flex-col items-center gap-2 text-xs font-medium uppercase tracking-[0.3em] text-slate-500 transition-colors hover:text-slate-300"
+          >
+            Scroll
+            <HiArrowDown className="animate-bounce" size={16} />
+          </a>
+        </Reveal>
       </div>
     </section>
   )

@@ -1,5 +1,7 @@
+import Reveal from './Reveal'
+import SectionHeading from './SectionHeading'
+
 const Experience = () => {
-  // Placeholder data - you'll fill this in later
   const experiences = [
     {
       title: "Software Engineering Intern",
@@ -27,35 +29,56 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="min-h-screen py-24 relative">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold section-title mb-4">
-            Professional <span className="gradient-text">Experience</span>
-          </h2>
-          <p className="section-subtitle text-lg">My journey in the tech industry</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          {experiences.map((exp, index) => (
-            <article
-              key={index}
-              className="glass rounded-[1.75rem] p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border-t-4 border-indigo-400"
-            >
-              <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-100 mb-2">
-                    {exp.title}
-                  </h3>
-                  <p className="text-lg text-indigo-300 font-semibold">{exp.company}</p>
+    <section id="experience" className="relative py-24 sm:py-32">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Career"
+          title="Professional"
+          highlight="Experience"
+          subtitle="My journey in the tech industry"
+        />
+
+        <div className="relative">
+          {/* Timeline spine */}
+          <div className="absolute left-[7px] top-2 h-full w-px bg-gradient-to-b from-indigo-500/60 via-purple-500/30 to-transparent md:left-1/2 md:-translate-x-1/2" />
+
+          <div className="space-y-10">
+            {experiences.map((exp, index) => (
+              <Reveal key={`${exp.company}-${index}`} delay={index * 100}>
+                <div
+                  className={`relative pl-10 md:w-1/2 md:pl-0 ${
+                    index % 2 === 0
+                      ? 'md:ml-auto md:pl-12'
+                      : 'md:mr-auto md:pr-12 md:text-right'
+                  }`}
+                >
+                  {/* Node */}
+                  <span
+                    className={`absolute top-2 flex h-4 w-4 items-center justify-center rounded-full bg-ink-950 ring-4 ring-indigo-500/30 left-0 md:top-3 ${
+                      index % 2 === 0 ? 'md:-left-2' : 'md:left-auto md:-right-2'
+                    }`}
+                  >
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-r from-indigo-400 to-purple-400" />
+                  </span>
+
+                  <div className="card p-6 text-left">
+                    <div className="mb-3 flex flex-wrap items-center gap-3">
+                      <span className="chip font-mono">{exp.period}</span>
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-slate-100">
+                      {exp.title}
+                    </h3>
+                    <p className="mt-1 font-semibold text-indigo-300">{exp.company}</p>
+                    {exp.description && (
+                      <p className="mt-4 leading-relaxed text-slate-400">
+                        {exp.description}
+                      </p>
+                    )}
+                  </div>
                 </div>
-                <span className="rounded-full bg-slate-700/50 px-4 py-2 text-sm font-semibold text-indigo-300">
-                  {exp.period}
-                </span>
-              </div>
-              <p className="text-slate-300 leading-relaxed">{exp.description}</p>
-            </article>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

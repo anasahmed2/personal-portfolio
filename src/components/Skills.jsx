@@ -1,57 +1,61 @@
+import { HiOutlineCode, HiOutlineCube, HiOutlineChip } from 'react-icons/hi'
+import Reveal from './Reveal'
+import SectionHeading from './SectionHeading'
+
 const Skills = () => {
-  // Placeholder data - you'll fill this in later
   const skillCategories = [
     {
       title: "Languages",
+      icon: HiOutlineCode,
       skills: ["Python", "Java", "JavaScript", "C", "C++", "C#", "SQL", "HTML", "CSS", "R"]
     },
     {
       title: "Frameworks & Libraries",
+      icon: HiOutlineCube,
       skills: ["React", "Next.js", "Flask", ".NET Framework", "Express.js", "LangChain", "LangGraph", "Pandas", "NumPy", "Scikit-learn", "OpenCV", "MediaPipe", "YOLO", "PyQt5", "Whisper", "ElevenLabs", "Nivo.js", "Matplotlib", "Altair", "Tailwind CSS", "Swing", "JUnit", "MSTest", "Axios", "WebSockets", "Asyncio"]
     },
     {
       title: "Tools & Technologies",
+      icon: HiOutlineChip,
       skills: ["Git", "GitHub", "PostgreSQL", "MongoDB", "MySQL", "VS Code", "IntelliJ", "Visual Studio", "Jupyter Notebook", "Jira", "Postman", "Raspberry Pi", "STM32", "TI AM243x", "UART", "Modbus", "LiDAR", "AprilTags", "GridSearchCV"]
     }
   ]
 
   return (
-    <section id="skills" className="min-h-screen py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold section-title mb-4">
-            Skills & <span className="gradient-text">Technologies</span>
-          </h2>
-          <p className="section-subtitle text-lg">Tools and technologies I work with</p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <div 
-              key={index} 
-              className="glass p-8 rounded-[1.75rem] transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 via-purple-500 to-indigo-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-md shadow-indigo-900">
-                  {category.title.charAt(0)}
-                </div>
-                <h3 className="text-2xl font-semibold text-slate-100">
-                  {category.title}
-                </h3>
-              </div>
-              <div className="space-y-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <div 
-                    key={skillIndex} 
-                    className="flex items-center gap-2 text-slate-300 hover:text-indigo-300 transition-colors duration-300 group cursor-default"
-                  >
-                    <div className="w-2 h-2 bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-300 rounded-full group-hover:scale-125 transition-transform"></div>
-                    <span className="text-sm">{skill}</span>
+    <section id="skills" className="relative py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Toolkit"
+          title="Skills &"
+          highlight="Technologies"
+          subtitle="Tools and technologies I work with"
+        />
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {skillCategories.map((category, index) => {
+            const Icon = category.icon
+            return (
+              <Reveal key={category.title} delay={index * 120}>
+                <div className="card group h-full p-8">
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-indigo-300 ring-1 ring-inset ring-white/10 transition-transform duration-300 group-hover:scale-110">
+                      <Icon size={24} />
+                    </div>
+                    <h3 className="font-display text-xl font-semibold text-slate-100">
+                      {category.title}
+                    </h3>
                   </div>
-                ))}
-              </div>
-            </div>
-          ))}
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill) => (
+                      <span key={skill} className="chip">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            )
+          })}
         </div>
       </div>
     </section>

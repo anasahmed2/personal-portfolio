@@ -1,5 +1,9 @@
+import { FaGithub } from 'react-icons/fa'
+import { HiArrowUpRight } from 'react-icons/hi2'
+import Reveal from './Reveal'
+import SectionHeading from './SectionHeading'
+
 const Projects = () => {
-  // Placeholder data - you'll fill this in later
   const projects = [
     {
       title: "Jarviz AI Assistant",
@@ -52,55 +56,54 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="min-h-screen py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl font-bold section-title mb-4">
-            Featured <span className="gradient-text">Projects</span>
-          </h2>
-          <p className="section-subtitle text-lg">Some of my recent work</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+    <section id="projects" className="relative py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Portfolio"
+          title="Featured"
+          highlight="Projects"
+          subtitle="Some of my recent work"
+        />
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className={`glass p-6 rounded-[1.75rem] transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl relative overflow-hidden flex flex-col ${
-                index === 0 ? 'xl:col-span-2' : ''
-              }`}
+            <Reveal
+              key={project.title}
+              delay={(index % 3) * 100}
+              className={index === 0 ? 'xl:col-span-2' : ''}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-transparent to-slate-800 opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-[1.75rem]"></div>
-              
-              <div className="relative z-10 flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-slate-100 mb-3 transition-all duration-300 group-hover:text-indigo-300">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card group flex h-full flex-col p-7"
+              >
+                <div className="mb-4 flex items-start justify-between gap-4">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/[0.04] text-slate-300 ring-1 ring-inset ring-white/10 transition-colors duration-300 group-hover:text-white">
+                    <FaGithub size={20} />
+                  </div>
+                  <HiArrowUpRight
+                    size={22}
+                    className="text-slate-500 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-indigo-300"
+                  />
+                </div>
+
+                <h3 className="font-display text-xl font-bold text-slate-100 transition-colors duration-300 group-hover:text-indigo-300">
                   {project.title}
                 </h3>
-                <p className="text-slate-300 mb-4 leading-relaxed flex-grow">
+                <p className="mt-3 flex-grow leading-relaxed text-slate-400">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className="bg-slate-700/50 text-indigo-300 text-xs px-3 py-1 rounded-full border border-slate-600 whitespace-nowrap"
-                    >
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="chip">
                       {tech}
                     </span>
                   ))}
                 </div>
-                <a 
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-medium transition-colors duration-300"
-                >
-                  View Project 
-                  <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-              </div>
-            </div>
+              </a>
+            </Reveal>
           ))}
         </div>
       </div>
