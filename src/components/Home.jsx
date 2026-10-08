@@ -5,14 +5,6 @@ import BlurText from './reactbits/BlurText'
 import ShinyText from './reactbits/ShinyText'
 import TiltedCard from './reactbits/TiltedCard'
 
-const focusAreas = ['AI Systems', 'Embedded Software', 'Full-Stack Web', 'Computer Vision']
-
-const stats = [
-  ['AI', 'Vision-driven projects'],
-  ['Systems', 'Hardware to cloud'],
-  ['Web', 'Modern interfaces'],
-]
-
 const socials = [
   { href: 'https://www.linkedin.com/in/anasahmed05/', label: 'LinkedIn', Icon: FaLinkedin },
   { href: 'https://github.com/anasahmed2', label: 'GitHub', Icon: FaGithub },
@@ -28,18 +20,8 @@ const Home = () => {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-12">
           {/* Left column */}
-          <div className="order-2 space-y-8 lg:order-1 lg:col-span-7">
-            <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-sm font-medium text-slate-300">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-                </span>
-                Welcome to my portfolio
-              </span>
-            </Reveal>
-
-            <div className="space-y-4">
+          <div className="order-2 space-y-7 lg:order-1 lg:col-span-7">
+            <div className="space-y-5">
               <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-slate-50 sm:text-6xl lg:text-7xl">
                 <BlurText
                   text="Hi, I'm"
@@ -58,37 +40,35 @@ const Home = () => {
                   className="text-shimmer block"
                 />
               </h1>
+
               <Reveal delay={160}>
-                <h2 className="text-2xl font-medium md:text-3xl">
+                <p className="text-2xl font-medium md:text-3xl">
                   <ShinyText
-                    text="Computer Science Student & Software Developer"
-                    color="#94a3b8"
+                    text="Computer Science @ UBC"
+                    color="#cbd5e1"
                     shineColor="#e0e7ff"
                     speed={3.5}
                     className="font-medium"
                   />
-                </h2>
+                </p>
+              </Reveal>
+
+              <Reveal delay={220}>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-base text-slate-400 sm:text-lg">
+                  <span>
+                    <span className="font-semibold text-slate-200">AI SWE Intern</span> @{' '}
+                    <span className="font-semibold text-indigo-300">Ericsson</span>
+                  </span>
+                  <span className="hidden h-1 w-1 rounded-full bg-slate-600 sm:inline-block" />
+                  <span>
+                    Prev @{' '}
+                    <span className="font-semibold text-slate-200">Morgan Stanley</span>
+                    {' '}&amp;{' '}
+                    <span className="font-semibold text-slate-200">APT Inc.</span>
+                  </span>
+                </div>
               </Reveal>
             </div>
-
-            <Reveal delay={220}>
-              <p className="max-w-2xl text-lg leading-relaxed text-slate-400">
-                I&rsquo;m a UBC Computer Science student building at the intersection of AI, embedded systems, and full-stack software.
-                I develop real-time hardware&ndash;software systems, computer vision applications, and cloud-connected platforms that turn
-                sensor data into intelligent action. From low-latency embedded communication to ML-powered vision systems and modern
-                web dashboards, I enjoy engineering reliable systems that bridge the digital and physical worlds.
-              </p>
-            </Reveal>
-
-            <Reveal delay={280}>
-              <div className="flex flex-wrap gap-2.5">
-                {focusAreas.map((item) => (
-                  <span key={item} className="chip">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </Reveal>
 
             <Reveal delay={340}>
               <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -119,19 +99,6 @@ const Home = () => {
                     </a>
                   ))}
                 </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={400}>
-              <div className="grid gap-4 pt-4 sm:grid-cols-3">
-                {stats.map(([label, description]) => (
-                  <div key={label} className="card p-4">
-                    <div className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
-                      {label}
-                    </div>
-                    <div className="mt-2 text-sm text-slate-400">{description}</div>
-                  </div>
-                ))}
               </div>
             </Reveal>
           </div>

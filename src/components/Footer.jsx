@@ -56,9 +56,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/5 pt-6 text-center text-sm text-slate-500">
-          &copy; {new Date().getFullYear()} Anas Ahmed. Designed &amp; built with React and Tailwind CSS.
-        </div>
       </div>
     </footer>
   )
