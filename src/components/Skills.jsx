@@ -38,17 +38,18 @@ const Skills = () => {
             return (
               <Reveal key={category.title} delay={index * 120} className="h-full">
                 <SpotlightCard
-                  className="group h-full !bg-ink-800/60 backdrop-blur-xl"
-                  spotlightColor="#818cf8"
-                  intensity={0.22}
+                  theme="light"
+                  className="group h-full !bg-white/75 backdrop-blur-xl"
+                  spotlightColor="#14b8a6"
+                  intensity={0.5}
                   spotlightSize={300}
-                  borderGlow={0.8}
+                  borderGlow={0.9}
                 >
                   <div className="mb-6 flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-indigo-300 ring-1 ring-inset ring-white/10 transition-transform duration-300 group-hover:scale-110">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500/15 to-sky-500/15 text-teal-600 ring-1 ring-inset ring-teal-500/15 transition-transform duration-300 group-hover:scale-110">
                       <Icon size={24} />
                     </div>
-                    <h3 className="font-display text-xl font-semibold text-slate-100">
+                    <h3 className="font-display text-xl font-semibold text-slate-800">
                       {category.title}
                     </h3>
                   </div>

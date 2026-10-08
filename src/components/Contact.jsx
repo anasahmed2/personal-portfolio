@@ -51,7 +51,7 @@ const Contact = () => {
   }
 
   const inputClasses =
-    'w-full rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-slate-100 placeholder-slate-500 outline-none transition-all duration-300 focus:border-indigo-400/50 focus:bg-white/[0.05] focus:ring-2 focus:ring-indigo-500/30'
+    'w-full rounded-2xl border border-slate-900/10 bg-white/70 px-5 py-4 text-slate-800 placeholder-slate-400 outline-none transition-all duration-300 focus:border-teal-400/60 focus:bg-white focus:ring-2 focus:ring-teal-500/25'
 
   return (
     <section id="contact" className="relative py-24 sm:py-32">
@@ -67,15 +67,16 @@ const Contact = () => {
           {/* Form */}
           <Reveal delay={120}>
             <SpotlightCard
-              className="!bg-ink-800/60 p-8 backdrop-blur-xl sm:!p-10"
-              spotlightColor="#a855f7"
-              intensity={0.2}
+              theme="light"
+              className="!bg-white/75 p-8 backdrop-blur-xl sm:!p-10"
+              spotlightColor="#14b8a6"
+              intensity={0.5}
               spotlightSize={360}
-              borderGlow={0.8}
+              borderGlow={0.9}
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="mb-2 block font-medium text-slate-200">
+                  <label htmlFor="name" className="mb-2 block font-medium text-slate-700">
                     Name
                   </label>
                   <input
@@ -91,7 +92,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="mb-2 block font-medium text-slate-200">
+                  <label htmlFor="email" className="mb-2 block font-medium text-slate-700">
                     Email
                   </label>
                   <input
@@ -107,7 +108,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="mb-2 block font-medium text-slate-200">
+                  <label htmlFor="message" className="mb-2 block font-medium text-slate-700">
                     Message
                   </label>
                   <textarea
@@ -125,20 +126,20 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 px-8 py-4 font-semibold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
+                  className="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-teal-500 via-emerald-500 to-sky-400 px-8 py-4 font-semibold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0"
                 >
-                  <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-500 group-hover:translate-x-full" />
+                  <span className="absolute inset-0 -translate-x-full bg-white/25 transition-transform duration-500 group-hover:translate-x-full" />
                   <span className="relative">{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                 </button>
 
                 {submitStatus === 'success' && (
-                  <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-center text-emerald-300">
+                  <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-center text-emerald-700">
                     ✓ Message sent successfully! I'll get back to you soon.
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="rounded-2xl border border-rose-500/30 bg-rose-500/10 p-4 text-center text-rose-300">
+                  <div className="rounded-2xl border border-rose-500/30 bg-rose-500/10 p-4 text-center text-rose-700">
                     ✗ Failed to send message. Please email me directly at anas31ahmed03@gmail.com
                   </div>
                 )}

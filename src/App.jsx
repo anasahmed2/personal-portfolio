@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="relative min-h-screen text-slate-300">
+    <div className="relative min-h-screen text-slate-600">
       <Background />
       <Navbar />
       <main>

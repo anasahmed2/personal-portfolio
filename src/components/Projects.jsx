@@ -66,11 +66,12 @@ const Projects = () => {
               className={`h-full ${index === 0 ? 'xl:col-span-2' : ''}`}
             >
               <SpotlightCard
-                className="group h-full !p-0 !bg-ink-800/60 backdrop-blur-xl"
-                spotlightColor={index === 0 ? '#22d3ee' : '#a855f7'}
-                intensity={0.24}
+                theme="light"
+                className="group h-full !p-0 !bg-white/75 backdrop-blur-xl"
+                spotlightColor={index === 0 ? '#0ea5e9' : '#14b8a6'}
+                intensity={0.55}
                 spotlightSize={320}
-                borderGlow={0.85}
+                borderGlow={0.9}
               >
                 <a
                   href={project.link}
@@ -79,16 +80,16 @@ const Projects = () => {
                   className="flex h-full flex-col p-7"
                 >
                   <div className="mb-4 flex items-start justify-between gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/[0.04] text-slate-300 ring-1 ring-inset ring-white/10 transition-colors duration-300 group-hover:text-white">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-500/10 text-slate-600 ring-1 ring-inset ring-teal-500/15 transition-colors duration-300 group-hover:text-teal-700">
                       <FaGithub size={20} />
                     </div>
                     <HiArrowUpRight
                       size={22}
-                      className="text-slate-500 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-indigo-300"
+                      className="text-slate-400 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-600"
                     />
                   </div>
 
-                  <h3 className="font-display text-xl font-bold text-slate-100 transition-colors duration-300 group-hover:text-indigo-300">
+                  <h3 className="font-display text-xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-teal-600">
                     {project.title}
                   </h3>
 

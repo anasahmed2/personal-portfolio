@@ -30,8 +30,8 @@ export default {
         },
       },
       boxShadow: {
-        glow: '0 0 0 1px rgba(129,140,248,0.15), 0 20px 60px -20px rgba(99,102,241,0.45)',
-        'glow-lg': '0 0 80px -20px rgba(168,85,247,0.5)',
+        glow: '0 0 0 1px rgba(45,212,191,0.18), 0 20px 60px -20px rgba(13,148,136,0.45)',
+        'glow-lg': '0 0 80px -20px rgba(20,184,166,0.5)',
       },
       backgroundImage: {
         'grid-fade': 'linear-gradient(to bottom, transparent, rgba(5,6,10,0.9))',

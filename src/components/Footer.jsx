@@ -16,14 +16,14 @@ const navLinks = [
 
 const Footer = () => {
   return (
-    <footer className="relative border-t border-white/5 py-12">
+    <footer className="relative border-t border-slate-900/5 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-400 font-display text-sm font-bold text-white">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 via-emerald-500 to-sky-400 font-display text-sm font-bold text-white">
               AA
             </span>
-            <span className="font-display text-lg font-semibold text-slate-100">
+            <span className="font-display text-lg font-semibold text-slate-800">
               Anas Ahmed
             </span>
           </div>
@@ -33,7 +33,7 @@ const Footer = () => {
               <a
                 key={link.id}
                 href={`#${link.id}`}
-                className="text-sm text-slate-400 transition-colors hover:text-indigo-300"
+                className="text-sm text-slate-500 transition-colors hover:text-teal-600"
               >
                 {link.label}
               </a>
@@ -48,7 +48,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-400/40 hover:text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-900/10 bg-white/70 text-slate-500 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-teal-400/40 hover:text-teal-600"
               >
                 <Icon size={16} />
               </a>

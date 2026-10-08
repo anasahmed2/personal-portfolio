@@ -7,13 +7,13 @@ const SectionHeading = ({ eyebrow, title, highlight, subtitle }) => {
         <span className="section-eyebrow">{eyebrow}</span>
       </Reveal>
       <Reveal delay={80}>
-        <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-slate-50 sm:text-5xl">
+        <h2 className="mt-4 font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
           {title} <span className="gradient-text">{highlight}</span>
         </h2>
       </Reveal>
       {subtitle && (
         <Reveal delay={160}>
-          <p className="mt-4 text-lg text-slate-400">{subtitle}</p>
+          <p className="mt-4 text-lg text-slate-500">{subtitle}</p>
         </Reveal>
       )}
     </div>

@@ -19,7 +19,7 @@ const Experience = () => {
       period: "May 2025 - Dec 2025"
     },
     {
-      title: "Software Engineer",
+      title: "Lead Software Engineer",
       company: "UBC SAE AeroDesign",
       period: "Sep 2025 - Present"
     },
@@ -42,7 +42,7 @@ const Experience = () => {
 
         <div className="relative">
           {/* Timeline spine */}
-          <div className="absolute left-[7px] top-2 h-full w-px bg-gradient-to-b from-indigo-500/60 via-purple-500/30 to-transparent md:left-1/2 md:-translate-x-1/2" />
+          <div className="absolute left-[7px] top-2 h-full w-px bg-gradient-to-b from-teal-500/60 via-sky-500/30 to-transparent md:left-1/2 md:-translate-x-1/2" />
 
           <div className="space-y-10">
             {experiences.map((exp, index) => (
@@ -56,21 +56,21 @@ const Experience = () => {
                 >
                   {/* Node */}
                   <span
-                    className={`absolute top-2 flex h-4 w-4 items-center justify-center rounded-full bg-ink-950 ring-4 ring-indigo-500/30 left-0 md:top-3 ${
+                    className={`absolute top-2 flex h-4 w-4 items-center justify-center rounded-full bg-white ring-4 ring-teal-500/20 shadow-sm left-0 md:top-3 ${
                       index % 2 === 0 ? 'md:-left-2' : 'md:left-auto md:-right-2'
                     }`}
                   >
-                    <span className="h-2 w-2 rounded-full bg-gradient-to-r from-indigo-400 to-purple-400" />
+                    <span className="h-2 w-2 rounded-full bg-gradient-to-r from-teal-500 to-sky-500" />
                   </span>
 
                   <div className="card p-6 text-left">
                     <div className="mb-3 flex flex-wrap items-center gap-3">
                       <span className="chip font-mono">{exp.period}</span>
                     </div>
-                    <h3 className="font-display text-xl font-bold text-slate-100">
+                    <h3 className="font-display text-xl font-bold text-slate-800">
                       {exp.title}
                     </h3>
-                    <p className="mt-1 font-semibold text-indigo-300">{exp.company}</p>
+                    <p className="mt-1 font-semibold text-teal-600">{exp.company}</p>
                   </div>
                 </div>
               </Reveal>
