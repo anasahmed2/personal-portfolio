@@ -4,27 +4,29 @@ import SectionHeading from './SectionHeading'
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Engineering Intern",
+      title: "AI Software Engineer Intern",
+      company: "Ericsson",
+      period: "Sep 2026 - Dec 2026"
+    },
+    {
+      title: "Software Engineer Intern",
       company: "Morgan Stanley",
       period: "May 2026 - Aug 2026"
     },
     {
-      title: "Software Developer Intern",
+      title: "Software Engineer Intern",
       company: "Atlas Power Technologies",
-      period: "May 2025 - Dec 2025",
-      description: "Developed a full-stack system using C# and .NET Framework for embedded hardware communication via UART with <20ms latency. Designed data storage using MongoDB and PostgreSQL. Implemented TSN protocol in C across TI AM243x boards achieving 99% reliability. Integrated C++ libmodbus library for Modbus network I/O device communication."
+      period: "May 2025 - Dec 2025"
     },
     {
       title: "Software Engineer",
       company: "UBC SAE AeroDesign",
-      period: "Sep 2025 - Present",
-      description: "Developed autonomous payload-capture system in Python using OpenCV and Pupil AprilTags with >85% tag detection accuracy. Implemented pre-trained YOLO model for real-time payload detection and localization, enhancing system reliability to 95%."
+      period: "Sep 2025 - Present"
     },
     {
       title: "Software Engineer",
       company: "UBC Smart City",
-      period: "Jan 2025 - Sep 2025",
-      description: "Designed and implemented PostgreSQL database on Raspberry Pi managing 2000+ sensor readings. Created Python Flask backend with RESTful API. Developed Next.js frontend with React and CSS, integrated Nivo.js for data visualization and analytics."
+      period: "Jan 2025 - Sep 2025"
     }
   ]
 
@@ -69,11 +71,6 @@ const Experience = () => {
                       {exp.title}
                     </h3>
                     <p className="mt-1 font-semibold text-indigo-300">{exp.company}</p>
-                    {exp.description && (
-                      <p className="mt-4 leading-relaxed text-slate-400">
-                        {exp.description}
-                      </p>
-                    )}
                   </div>
                 </div>
               </Reveal>
