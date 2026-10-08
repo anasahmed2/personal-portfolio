@@ -4,6 +4,8 @@ import { HiOutlineMail, HiOutlineSparkles } from 'react-icons/hi'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
+import SpotlightCard from './reactbits/SpotlightCard'
+import ShinyText from './reactbits/ShinyText'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -66,11 +68,17 @@ const Contact = () => {
 
         <div className="grid items-start gap-6 lg:grid-cols-5">
           {/* Info card */}
-          <Reveal className="lg:col-span-2">
-            <div className="card h-full p-8 lg:p-10">
+          <Reveal className="h-full lg:col-span-2">
+            <SpotlightCard
+              className="h-full !bg-ink-800/60 backdrop-blur-xl lg:!p-10"
+              spotlightColor="#22d3ee"
+              intensity={0.22}
+              spotlightSize={320}
+              borderGlow={0.85}
+            >
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-medium text-indigo-300">
                 <HiOutlineSparkles size={16} />
-                Available for collaborative work
+                <ShinyText text="Available for collaborative work" color="#818cf8" shineColor="#e0e7ff" speed={3} />
               </div>
               <h3 className="font-display text-2xl font-bold text-slate-100">
                 Have an idea worth building?
@@ -123,12 +131,18 @@ const Contact = () => {
                   <FaGithub size={18} />
                 </a>
               </div>
-            </div>
+            </SpotlightCard>
           </Reveal>
 
           {/* Form */}
           <Reveal delay={120} className="lg:col-span-3">
-            <div className="card p-8 sm:p-10">
+            <SpotlightCard
+              className="!bg-ink-800/60 p-8 backdrop-blur-xl sm:!p-10"
+              spotlightColor="#a855f7"
+              intensity={0.2}
+              spotlightSize={360}
+              borderGlow={0.8}
+            >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="mb-2 block font-medium text-slate-200">
@@ -199,7 +213,7 @@ const Contact = () => {
                   </div>
                 )}
               </form>
-            </div>
+            </SpotlightCard>
           </Reveal>
         </div>
       </div>

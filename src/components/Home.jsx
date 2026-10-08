@@ -1,6 +1,9 @@
 import { FaLinkedin, FaGithub, FaFileDownload } from 'react-icons/fa'
 import { HiArrowDown } from 'react-icons/hi'
 import Reveal from './Reveal'
+import BlurText from './reactbits/BlurText'
+import ShinyText from './reactbits/ShinyText'
+import TiltedCard from './reactbits/TiltedCard'
 
 const focusAreas = ['AI Systems', 'Embedded Software', 'Full-Stack Web', 'Computer Vision']
 
@@ -37,16 +40,33 @@ const Home = () => {
             </Reveal>
 
             <div className="space-y-4">
-              <Reveal delay={80}>
-                <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-slate-50 sm:text-6xl lg:text-7xl">
-                  Hi, I&apos;m
-                  <br />
-                  <span className="text-shimmer">Anas Ahmed</span>
-                </h1>
-              </Reveal>
+              <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-slate-50 sm:text-6xl lg:text-7xl">
+                <BlurText
+                  text="Hi, I'm"
+                  animateBy="words"
+                  direction="top"
+                  delay={120}
+                  stepDuration={0.4}
+                  className="block"
+                />
+                <BlurText
+                  text="Anas Ahmed"
+                  animateBy="letters"
+                  direction="bottom"
+                  delay={60}
+                  stepDuration={0.4}
+                  className="text-shimmer block"
+                />
+              </h1>
               <Reveal delay={160}>
-                <h2 className="text-2xl font-medium text-slate-300 md:text-3xl">
-                  Computer Science Student &amp; Software Developer
+                <h2 className="text-2xl font-medium md:text-3xl">
+                  <ShinyText
+                    text="Computer Science Student & Software Developer"
+                    color="#94a3b8"
+                    shineColor="#e0e7ff"
+                    speed={3.5}
+                    className="font-medium"
+                  />
                 </h2>
               </Reveal>
             </div>
@@ -119,18 +139,21 @@ const Home = () => {
           {/* Right column — profile */}
           <div className="order-1 flex justify-center lg:order-2 lg:col-span-5 lg:justify-end">
             <Reveal delay={200} className="w-full max-w-sm">
-              <div className="group relative animate-float">
-                <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-indigo-500/40 via-purple-500/30 to-cyan-400/40 opacity-60 blur-2xl transition-opacity duration-700 group-hover:opacity-100" />
-                <div className="border-glow relative overflow-hidden rounded-[2rem] bg-ink-800/60 p-3 backdrop-blur-xl">
-                  <div className="overflow-hidden rounded-[1.5rem]">
-                    <img
-                      src="/assets/profile_pic.jpg"
-                      alt="Anas Ahmed"
-                      className="h-[440px] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="pointer-events-none absolute inset-3 rounded-[1.5rem] ring-1 ring-inset ring-white/10" />
-                </div>
+              <div className="relative">
+                <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-indigo-500/40 via-purple-500/30 to-cyan-400/40 opacity-60 blur-2xl" />
+                <TiltedCard
+                  imageSrc="/assets/profile_pic.jpg"
+                  altText="Anas Ahmed"
+                  captionText="Anas Ahmed"
+                  containerHeight="460px"
+                  containerWidth="100%"
+                  imageHeight="440px"
+                  imageWidth="340px"
+                  rotateAmplitude={12}
+                  scaleOnHover={1.06}
+                  showMobileWarning={false}
+                  showTooltip
+                />
               </div>
             </Reveal>
           </div>

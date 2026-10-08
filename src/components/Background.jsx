@@ -1,18 +1,24 @@
+import Aurora from './reactbits/Aurora'
+
 /**
- * Fixed decorative background: deep gradient base, animated aurora blobs,
- * and a subtle dotted grid. Sits behind all content, pointer-events none.
+ * Fixed decorative background: deep base, a live WebGL aurora (React Bits),
+ * plus a subtle dotted grid. Sits behind all content, pointer-events none.
  */
 const Background = () => {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden bg-ink-950">
-      {/* Aurora blobs */}
-      <div className="absolute -left-40 -top-40 h-[38rem] w-[38rem] animate-aurora-1 rounded-full bg-indigo-600/20 blur-[120px]" />
-      <div className="absolute -right-40 top-1/4 h-[34rem] w-[34rem] animate-aurora-2 rounded-full bg-purple-600/20 blur-[120px]" />
-      <div className="absolute bottom-0 left-1/3 h-[30rem] w-[30rem] animate-aurora-1 rounded-full bg-cyan-500/10 blur-[120px]" />
+      {/* WebGL aurora — top band */}
+      <div className="absolute inset-x-0 top-0 h-[70vh] opacity-60">
+        <Aurora colorStops={['#6366f1', '#a855f7', '#22d3ee']} amplitude={1.1} blend={0.55} speed={0.6} />
+      </div>
+
+      {/* Soft color glows */}
+      <div className="absolute -left-40 top-1/3 h-[32rem] w-[32rem] animate-aurora-1 rounded-full bg-indigo-600/15 blur-[120px]" />
+      <div className="absolute -right-40 bottom-1/4 h-[30rem] w-[30rem] animate-aurora-2 rounded-full bg-purple-600/15 blur-[120px]" />
 
       {/* Dotted grid */}
       <div
-        className="absolute inset-0 opacity-[0.15]"
+        className="absolute inset-0 opacity-[0.14]"
         style={{
           backgroundImage:
             'radial-gradient(circle at 1px 1px, rgba(148,163,184,0.35) 1px, transparent 0)',

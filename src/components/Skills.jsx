@@ -1,6 +1,7 @@
 import { HiOutlineCode, HiOutlineCube, HiOutlineChip } from 'react-icons/hi'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
+import SpotlightCard from './reactbits/SpotlightCard'
 
 const Skills = () => {
   const skillCategories = [
@@ -35,8 +36,14 @@ const Skills = () => {
           {skillCategories.map((category, index) => {
             const Icon = category.icon
             return (
-              <Reveal key={category.title} delay={index * 120}>
-                <div className="card group h-full p-8">
+              <Reveal key={category.title} delay={index * 120} className="h-full">
+                <SpotlightCard
+                  className="group h-full !bg-ink-800/60 backdrop-blur-xl"
+                  spotlightColor="#818cf8"
+                  intensity={0.22}
+                  spotlightSize={300}
+                  borderGlow={0.8}
+                >
                   <div className="mb-6 flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 text-indigo-300 ring-1 ring-inset ring-white/10 transition-transform duration-300 group-hover:scale-110">
                       <Icon size={24} />
@@ -52,7 +59,7 @@ const Skills = () => {
                       </span>
                     ))}
                   </div>
-                </div>
+                </SpotlightCard>
               </Reveal>
             )
           })}

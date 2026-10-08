@@ -2,6 +2,7 @@ import { FaGithub } from 'react-icons/fa'
 import { HiArrowUpRight } from 'react-icons/hi2'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
+import SpotlightCard from './reactbits/SpotlightCard'
 
 const Projects = () => {
   const projects = [
@@ -70,39 +71,47 @@ const Projects = () => {
             <Reveal
               key={project.title}
               delay={(index % 3) * 100}
-              className={index === 0 ? 'xl:col-span-2' : ''}
+              className={`h-full ${index === 0 ? 'xl:col-span-2' : ''}`}
             >
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="card group flex h-full flex-col p-7"
+              <SpotlightCard
+                className="group h-full !p-0 !bg-ink-800/60 backdrop-blur-xl"
+                spotlightColor={index === 0 ? '#22d3ee' : '#a855f7'}
+                intensity={0.24}
+                spotlightSize={320}
+                borderGlow={0.85}
               >
-                <div className="mb-4 flex items-start justify-between gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/[0.04] text-slate-300 ring-1 ring-inset ring-white/10 transition-colors duration-300 group-hover:text-white">
-                    <FaGithub size={20} />
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-full flex-col p-7"
+                >
+                  <div className="mb-4 flex items-start justify-between gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/[0.04] text-slate-300 ring-1 ring-inset ring-white/10 transition-colors duration-300 group-hover:text-white">
+                      <FaGithub size={20} />
+                    </div>
+                    <HiArrowUpRight
+                      size={22}
+                      className="text-slate-500 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-indigo-300"
+                    />
                   </div>
-                  <HiArrowUpRight
-                    size={22}
-                    className="text-slate-500 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-indigo-300"
-                  />
-                </div>
 
-                <h3 className="font-display text-xl font-bold text-slate-100 transition-colors duration-300 group-hover:text-indigo-300">
-                  {project.title}
-                </h3>
-                <p className="mt-3 flex-grow leading-relaxed text-slate-400">
-                  {project.description}
-                </p>
+                  <h3 className="font-display text-xl font-bold text-slate-100 transition-colors duration-300 group-hover:text-indigo-300">
+                    {project.title}
+                  </h3>
+                  <p className="mt-3 flex-grow leading-relaxed text-slate-400">
+                    {project.description}
+                  </p>
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="chip">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </a>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="chip">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </a>
+              </SpotlightCard>
             </Reveal>
           ))}
         </div>
