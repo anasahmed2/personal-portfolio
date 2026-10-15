@@ -470,8 +470,8 @@ export default function OrbitPortfolio() {
               >
                 <div className="orbit-role-marker" aria-hidden="true" />
                 <div>
-                  <h3>{role.title}</h3>
-                  <p className="orbit-role-org">{role.organization}</p>
+                  <h3>{role.organization}</h3>
+                  <p className="orbit-role-org">{role.title}</p>
                 </div>
                 <div className="orbit-role-date">{role.date}</div>
               </article>
